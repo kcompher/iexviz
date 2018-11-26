@@ -11,7 +11,7 @@ This is a notebook to show how to work with IEX historic [TOP and DEEPs](https:/
 
 - Pandas has issues reading the json, so I then used spark and python's json2parquet to convert json to parquet. Spark worked great on the TOPS.json, but required a debug config I didn't feel like fixing. So I resorted to python's json2parquet, which worked surprisingly well.
 
-- This is also hosted on [S3](s3://iexviz) if you want to work with some of the datasets
+- This is also hosted on S3 as ```s3://iexviz``` if you want to work with some of the datasets
   - [Overview notebook on S3](http://iexviz.s3-website-us-east-1.amazonaws.com/)
   - [Processed TOPS parquet](https://s3.amazonaws.com/iexviz/data/processed/20180913_IEXTP1_TOPS1.6.parquet)
   - [Processed DEEP parquet](https://s3.amazonaws.com/iexviz/data/processed/20180913_IEXTP1_DEEP1.0.parquet)
@@ -27,10 +27,10 @@ Project Organization
     ├── LICENSE
     ├── Makefile           <- Makefile with commands like `make data` or `make train`
     ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
+    ├── data               <- Note the gitrepo ignores the actual data files. You'll need to generate them or get from s3.
+    │   ├── external       <- Data from third party sources. - note used
+    │   ├── interim        <- Intermediate data that has been transformed. Used to house jsons and csv 
+    │   ├── processed      <- The final, canonical data sets for modeling. Location for processed parquet files. 
     │   └── raw            <- The original, immutable data dump.
     │
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
@@ -54,7 +54,7 @@ Project Organization
     │   ├── __init__.py    <- Makes src a Python module
     │   │
     │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
+    │   │   └── make_dataset.py <- code decribes how to use go and js2on2parquet to process data.
     │   │
     │   ├── features       <- Scripts to turn raw data into features for modeling
     │   │   └── build_features.py
