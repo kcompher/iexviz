@@ -11,6 +11,16 @@ This is a notebook to show how to work with IEX historic [TOP and DEEPs](https:/
 
 - Pandas has issues reading the json, so I then used spark and python's json2parquet to convert json to parquet. Spark worked great on the TOPS.json, but required a debug config I didn't feel like fixing. So I resorted to python's json2parquet, which worked surprisingly well.
 
+- This is also hosted on [S3](s3://iexviz) if you want to work with some of the datasets
+  - [Overview notebook on S3](http://iexviz.s3-website-us-east-1.amazonaws.com/)
+  - [Processed TOPS parquet](https://s3.amazonaws.com/iexviz/data/processed/20180913_IEXTP1_TOPS1.6.parquet)
+  - [Processed DEEP parquet](https://s3.amazonaws.com/iexviz/data/processed/20180913_IEXTP1_DEEP1.0.parquet)
+  - [Intermediate TOPs JSON](https://s3.amazonaws.com/iexviz/data/interim/20180913_IEXTP1_TOPS1.6.json)
+  - [Intermediate DEEP csv](https://s3.amazonaws.com/iexviz/data/interim/20180913_IEXTP1_DEEP1.0.csv) 
+  - [Intermediate TOPs csv](https://s3.amazonaws.com/iexviz/data/interim/20180913_IEXTP1_TOPS1.6.csv)
+  - [Intermedieate DEEP json](https://s3.amazonaws.com/iexviz/data/interim/20180913_IEXTP1_DEEP1.0.json)
+
+
 Project Organization
 ------------
 
