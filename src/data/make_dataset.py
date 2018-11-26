@@ -1,3 +1,15 @@
+# use Go IEX's pcap2json examples below
+# pcap2csv parses out just open, high, low, close, volume by symbol w ns timestamp
+pcap2csv < data%2Ffeeds%2F20180913%2F20180913_IEXTP1_DEEP1.0.pcap > 20180913_IEXTP1_DEEP1.0.csv
+# pcap2json parses out the tcp headers and leave all of other message Database
+pcap2json < data%2Ffeeds%2F20180913%2F20180913_IEXTP1_DEEP1.0.pcap > 20180913_IEXTP1_DEEP1.0.json
+
+# json2parquet python library convert the json to parquet, which pandas and pyarrow work better with
+from json2parquet import convert_json
+# Infer Schema (requires reading dataset for column names)
+convert_json('20180913_IEXTP1_DEEP1.0.json', '20180913_IEXTP1_DEEP1.0.parquet')
+
+
 # -*- coding: utf-8 -*-
 import click
 import logging
