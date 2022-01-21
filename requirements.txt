@@ -35,7 +35,7 @@ idna==2.7
 IEX-hist-parser==0.0.2
 ijson==2.3
 ipykernel==5.1.0
-ipython==7.0.1
+ipython==7.16.3
 ipython-genutils==0.2.0
 ipywidgets==7.4.2
 jedi==0.13.1
