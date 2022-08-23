@@ -59,7 +59,7 @@ mkl-random==1.0.1
 more-itertools==4.3.0
 msgpack==0.5.6
 nb-conda-kernels==2.1.1
-nbconvert==5.3.1
+nbconvert==6.5.1
 nbformat==4.4.0
 nose==1.3.7
 notebook==5.7.2
